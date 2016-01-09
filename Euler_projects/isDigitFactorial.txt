@@ -1,0 +1,60 @@
+
+// euler-prob_34: digit factorial
+class digitFactorialTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println(isDisgitFactorial(145));
+		
+	}
+	
+	static ArrayList<Integer> splittedNums(int number){
+		
+		int digit = (int)Math.log10(number) + 1;
+		
+		ArrayList<Integer> out = new ArrayList();
+		int q=0;
+		
+		while( number != 0 ){
+			--digit;
+			q = number/(int)Math.pow(10, digit);
+			out.add(q);
+			number = number%(int)Math.pow(10, digit);
+		}
+		
+		return out;
+		
+	}
+	
+
+    static int factorial(int n) {
+       if (n == 0) {
+           return 1;
+       } else {
+           return n * factorial(n - 1);
+       }
+    }
+    
+    static boolean isDisgitFactorial(int number){
+    	
+    	ArrayList<Integer> arr = splittedNums(number);
+    	int resultFact = 0;
+    	
+    	for( int j=0; j < arr.size(); j++ ){
+    		resultFact += factorial(arr.get(j));
+    	}
+    	
+    	if( resultFact == number ){
+    		return true;
+    	}
+
+    	return false;
+    }
+   
+    
+    static void display(ArrayList<Integer> arr){
+    	for(int k=0; k < arr.size(); k++){
+    		System.out.print(arr.get(k) + " ");
+    	}
+    }
+}

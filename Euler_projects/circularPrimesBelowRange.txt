@@ -1,0 +1,94 @@
+
+// euler-prob_35: Circular primes
+class circularPrimesTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		display(circularPrimes(100));
+	}
+	
+	static boolean isPrime(int num){
+		
+		int count = 1;
+		
+		for( int i=2; i < num; i++){
+			if( num%i == 0 ){
+				count++;
+			}
+		}
+		
+		if( count == 1 ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	static ArrayList<Integer> circularPrimes(int range){
+		
+		ArrayList<Integer> out = new ArrayList();
+		int num = 2;
+		
+		while( num < range ){
+			
+			if( isPrime(num) ){	// firstly, check if the number is prime 
+			
+				ArrayList<Integer> rotateNums = rotateNumber(num);
+				int numOfRotatedNums = rotateNums.size();
+				int countPrims = 0;
+			
+				for( int k=0; k < numOfRotatedNums; k++){
+					int tmp = rotateNums.get(k);
+				
+					if( isPrime(tmp) ){
+						countPrims++;
+					}
+				}
+			
+				if( countPrims == numOfRotatedNums ){
+					out.add(num);
+				}
+			
+			}
+			
+			num++;
+			
+		}
+		
+		return out;
+		
+	}
+	
+	static ArrayList<Integer> rotateNumber(int number)
+    	{
+    		ArrayList<Integer> out = new ArrayList();
+        	int start = number;
+ 		
+        	int numdigits = (int) Math.log10((double)number); // would return numdigits - 1
+        	int multiplier = (int) Math.pow(10.0, (double)numdigits);
+           
+        	while(true)
+        	{
+            		int q = number / 10;
+            		int r = number % 10;
+ 
+            		//1234 = 123;
+        		number = number / 10;
+            		number = number + multiplier * r;
+            
+            		out.add(number);
+            
+            		if(number == start){
+              			break;
+            		}
+        	}
+        
+        	return out;
+    	}
+    
+   	static void display(ArrayList<Integer> arr){
+    		for( int j=0; j < arr.size(); j++){
+    			System.out.print(arr.get(j) + " ");
+    		}
+    	}
+}

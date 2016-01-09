@@ -1,0 +1,45 @@
+/* package whatever; // don't place package name! */
+
+//import java.util.*;
+//import java.lang.*;
+//import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	
+	static void isAmicablePairs(int num1, int num2){
+		
+		int sum1=0;
+		int sum2=0;
+		
+		for(int i=1; i < num1; i++){
+			if(num1%i == 0){
+				sum1 += i;
+			}
+		}
+		
+		//System.out.println("sum1=" + sum1);
+		
+		for(int j=1; j < num2; j++){
+			if(num2%j == 0){
+				sum2 += j;
+			}
+		}
+		
+		//System.out.println("sum2=" + sum2);
+		
+		if( (sum1 == num2)&(sum1 == num2) ){
+			System.out.println("The numers are amicable pairs!");
+		}else{
+			System.out.println("The numers are not amicable pairs!");
+		}
+		
+	}
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		isAmicablePairs(220, 284);
+	}
+}

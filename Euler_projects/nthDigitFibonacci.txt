@@ -1,0 +1,33 @@
+
+// Euler-prob_25: 1000-digit Fibonacci number
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.print(nthDigitFibonacci(3));
+		//System.out.print(nthDigitFibonacci(100));
+	}
+	
+	
+	static int nthDigitFibonacci(int digit){
+		
+		int first=1;
+		int second=1;
+		int sum = first + second;
+	
+		int numOfDigits = (int)Math.log10(sum) + 1;
+				
+		while( numOfDigits < digit ){	
+			
+			first = second;
+			second = sum;
+			sum = first + second;
+			
+			numOfDigits = (int)Math.log10(sum) + 1;
+			
+		}
+		
+		return sum;
+	}
+	
+}

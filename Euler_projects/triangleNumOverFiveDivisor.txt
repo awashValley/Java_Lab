@@ -1,0 +1,30 @@
+public class eulerQn12{
+
+    static int triangleNumOverFiveDivisor(int numOfDivisors){
+        
+        int num = 0;	// the triangular number
+        int i=0;	// natural number: 0,1,2,3,...
+        int count=0;	// it counts the number of diviors for the triangular number
+        
+        while( count <= numOfDivisors ){
+            
+            i += 1;
+            num = num + i;
+            count = 0;            
+            
+            for( int j=1; j <= num; j++){
+               
+                if( num%j == 0){
+                    count += 1;
+                }        
+            }  
+        }
+  
+        return num;
+    }
+    
+     public static void main(String []args){
+        System.out.println(triangleNumOverFiveDivisor(5));
+        //System.out.println(triangleNumOverFiveDivisor(200));
+     }
+}

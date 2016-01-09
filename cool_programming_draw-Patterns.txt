@@ -1,0 +1,50 @@
+-- draw patterns --
+######
+#    #
+#    #
+#    #
+#    #
+######
+
+
+class drawPatternsTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		drawPatterns(6);
+	}
+	
+	static void drawPatterns(int dim){
+		
+		int iteration = 1;
+		int numOfItems;
+		int numOfSpaces;
+		
+		while(iteration <= dim){
+			
+			if( (iteration == 1) | (iteration == dim)){
+				numOfItems = dim;
+			}else{
+				numOfItems = 2;
+			}
+			
+			numOfSpaces = dim - numOfItems;
+			
+			if(numOfSpaces == 0){
+				for(int i=1; i <= numOfItems; i++){
+					System.out.print("#");
+				}
+			}else{
+				System.out.print("#");
+				for(int j=1; j <= numOfSpaces; j++){
+					System.out.print(" ");
+				}
+				System.out.print("#");
+			}
+			
+			System.out.println();
+			
+			iteration++;
+		}
+	}
+}

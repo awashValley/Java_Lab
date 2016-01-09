@@ -1,0 +1,41 @@
+
+// check if a number is pandigital
+class isPandigitalTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+		System.out.println( isPandigital(34259) );
+		
+	}
+	
+	
+	static boolean isPandigital(int number) {
+		
+		String numStr = Integer.toString(number);
+		int digit = (int)Math.log10(number) + 1;
+		int count=0;
+		
+		String str = "";
+		
+		for(int i=1; i<=digit; i++){
+			str += i;
+		}
+		
+    		for (int i = 0; i < numStr.length(); i++) {
+        		char c = numStr.charAt(i);
+        		for (int j = 0; j < str.length(); j++) {
+            			if (c == str.charAt(j)) {
+                			count++;
+            			}
+        		}
+    		}
+    		
+    		if( count == digit ){
+    			return true;
+    		}
+
+    		return false;
+	}
+
+}

@@ -1,0 +1,39 @@
+
+/* fibonacci series */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		displayFibonaccifibonacciSeries(13));
+	}
+	
+	
+	static ArrayList<Integer> fibonacciSeries(int terms){
+		
+		ArrayList<Integer> fibb = new ArrayList();
+		int first=1;
+		fibb.add(first);
+		int second=1;
+		fibb.add(second);
+		int sum = first + second;
+		
+		while( fibb.size() < terms){	
+
+			fibb.add(sum);
+			
+			first = second;
+			second = sum;
+			sum = first + second;
+			
+		}
+		
+		return fibb;
+	}
+	
+	static void displayFibonacci(ArrayList<Integer> nums){
+		for(int i=0; i < nums.size(); i++){
+			System.out.print(nums.get(i) + " ");
+		}
+	}
+	
+}

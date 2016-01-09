@@ -1,0 +1,175 @@
+## Fastest way to get number of digits on a number
+int numOfDigits = (int)Math.log10(sum) + 1;
+
+## rotate digits in an integer
+class rotateTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		RotateNumber(123);
+	}
+	
+	static void RotateNumber(int number)
+     	{
+            int start = number;
+ 
+            int numdigits = (int) Math.log10((double)number); // would return 								//numdigits - 1
+            int multiplier = (int) Math.pow(10.0, (double)numdigits);
+           
+            while(true)
+            {
+                  int q = number / 10;
+                  int r = number % 10;
+ 
+                  //1234 = 123;
+                  number = number / 10;
+                  number = number + multiplier * r;
+ 
+                  System.out.println(number);
+                 
+                  if(number == start){
+                  	break;
+                  }
+            }
+     }
+}
+
+
+## reverse a number
+static int reverseNum(int number){
+		
+	int reverse = number % 10;
+    	number = number / 10;
+    	
+    	while (number != 0)
+    	{
+        	reverse = (number % 10) + (10 * reverse);
+        	number = number / 10;
+    	}
+    	
+    	return reverse;
+}
+
+
+## truncate a number, either from Left to right or vice versa...
+static void truncateNum(int num, String direction){
+		
+	int numOfDigits = (int)Math.log10(num) + 1;
+		
+	if( direction == "RL" ){
+		while( num != 0 ){
+				
+			System.out.print(num + " ");
+				
+			num = num/10;
+				
+		}
+	}else{
+		while( num != 0 ){
+				
+			numOfDigits--;
+			System.out.print(num + " ");
+			
+			int tmp = (int)Math.pow(10, numOfDigits);
+				
+			num = num%tmp;
+				
+		}
+	}
+		
+}	
+
+
+## split a number to digits
+static ArrayList<Integer> splittedNums(int number){
+		
+		int digit = (int)Math.log10(number) + 1;
+		
+		ArrayList<Integer> out = new ArrayList();
+		int q=0;
+		
+		while( number != 0 ){
+			--digit;
+			q = number/(int)Math.pow(10, digit);
+			out.add(q);
+			number = number%(int)Math.pow(10, digit);
+		}
+		
+		return out;
+		
+	}
+
+## change a word to numeric value
+String str = "SKY";
+int val=0;
+for( int i=0; i < str.length(); i++ ){
+	char ch = str.charAt(i);
+	int tmp = (int)ch - 64;
+	val += tmp;
+}
+System.out.println(val);
+
+## remove comma and quotation from txt file
+word = word.replaceAll("\"", "").replaceAll(","," ");
+
+## How to use 'break'?
+static boolean isTriangleNum(double number){
+		
+	boolean ans=false;
+	
+	int n=1;
+	double triNum = 0.5*n*(n+1);
+	while (number >= triNum) {
+		n++;
+		triNum = 0.5*n*(n+1);
+		if (number == triNum) {
+			ans = true;// don't use 'return true', rather update 'ans' to 'true'
+			break;
+		}
+			
+	}
+		
+	return ans;
+}
+
+## to reset the ArrayList<Integer> object to zero/null
+ArrayList<Integer> obj = new ArrayList();
+obj.clear();
+
+
+## second largest value in an array
+static int secondLargest(int[] input) {
+	int largest,secondLargest;
+
+        if(input[0] > input[1]) {
+		largest = input[0];
+		secondLargest = input[1];
+	}
+	else {
+		largest = input[1];
+		secondLargest = input[0];
+	}
+
+	for(int i = 2; i < input.length; i++) {
+		if((input[i] <= largest) && input[i] > secondLargest) {
+			secondLargest = input[i];
+                }
+
+                if(input[i] > largest) {
+			largest = input[i];
+			secondLargest = largest;
+                    
+                }
+	}
+
+	return secondLargest;
+}
+
+## recursion - fibonacci sequence
+static int fibonacci(int n) {
+	if(n <= 1){
+		return n;
+	}else{
+		return fibonacci(n-1) + fibonacci(n-2);
+	}
+}

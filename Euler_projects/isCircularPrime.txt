@@ -1,0 +1,97 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//System.out.println(isPrime(10));
+		//display(rotateNumber(123));
+		System.out.println(isCircularPrime(97));
+	}
+	
+	static boolean isPrime(int num){
+		
+		int count = 1;
+		
+		for( int i=2; i < num; i++){
+			if( num%i == 0 ){
+				count++;
+			}
+		}
+		
+		if( count == 1 ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	static boolean isCircularPrime(int num){
+		
+		if( isPrime(num) ){	// firstly, check if the number is prime 
+			
+			ArrayList<Integer> rotateNums = rotateNumber(num);
+			int numOfRotatedNums = rotateNums.size();
+			int countPrims = 0;
+			
+			for( int k=0; k < numOfRotatedNums; k++){
+				int tmp = rotateNums.get(k);
+				
+				if( isPrime(tmp) ){
+					countPrims++;
+				}
+			}
+			
+			if( countPrims == numOfRotatedNums ){
+				//System.out.println("It is a circular prime number!");
+				return true;
+			}else{
+				//System.out.println("It is a prime number, but not circular!");
+				return false;
+			}
+			
+		}else{
+			//System.out.println("It is not even a prime number!");
+			return false;
+		}
+	}
+	
+	static ArrayList<Integer> rotateNumber(int number)
+    	{
+    		ArrayList<Integer> out = new ArrayList();
+        	int start = number;
+ 		//out.add(start);
+ 		
+        	int numdigits = (int) Math.log10((double)number); // would return numdigits - 1
+        	int multiplier = (int) Math.pow(10.0, (double)numdigits);
+           
+        	while(true)
+        	{
+            		int q = number / 10;
+            		int r = number % 10;
+ 
+            		//1234 = 123;
+        		number = number / 10;
+            		number = number + multiplier * r;
+            
+            		out.add(number);
+            
+            		if(number == start){
+              			break;
+            		}
+        	}
+        
+        	return out;
+    	}
+    
+    	static void display(ArrayList<Integer> arr){
+    		for( int j=0; j < arr.size(); j++){
+    			System.out.print(arr.get(j) + " ");
+    		}
+    	}
+}

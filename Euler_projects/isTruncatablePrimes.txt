@@ -1,0 +1,115 @@
+
+// check if a number is a truncatable prime
+class truncatablePrimeTest
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println(isTruncatablePrimes(191) );
+
+	}
+	
+	static boolean isPrime(int num){
+		
+		int count = 1;
+		
+		for( int i=2; i < num; i++){
+			if( num%i == 0){
+				count++;
+			}
+		}
+		
+		if( count == 1){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	static ArrayList<Integer> truncateNum(int num, String direction){
+		
+		ArrayList<Integer> truncRL = new ArrayList();
+		ArrayList<Integer> truncLR = new ArrayList();
+		
+		int numOfDigits = (int)Math.log10(num) + 1;
+		
+		if( direction == "RL" ){
+			while( num != 0 ){
+				
+				truncRL.add(num);
+				
+				num = num/10;
+				
+			}
+			
+			return truncRL;
+		}else{
+			while( num != 0 ){
+				
+				numOfDigits--;
+				truncLR.add(num);
+				
+				int tmp = (int)Math.pow(10, numOfDigits);
+				
+				num = num%tmp;
+				
+			}
+			
+			return truncLR;
+		}
+	
+	}
+	
+	static void display(ArrayList<Integer> arr){
+		
+		for( int k=0; k < arr.size(); k++){
+			System.out.print(arr.get(k) + " ");
+		}
+	}
+	
+	
+	static boolean isTruncatablePrimes(int num){
+		
+		if( isPrime(num) ){
+		
+			int count1 = 1;	// since the original number is prime
+			int count2 = 1;	
+
+			ArrayList num1 = truncateNum(num, "RL");
+			ArrayList num2 = truncateNum(num, "LR");
+			int len1 = num1.size();
+			int len2 = num2.size();
+			
+			for( int i=1; i < num1.size(); i++){
+				
+				int tmp1 = (int)num1.get(i);
+				
+				if( isPrime(tmp1) ){
+					count1++;
+				}
+			}
+			
+			for( int j=1; j < num2.size(); j++){
+				
+				int tmp2 = (int)num2.get(j);
+				
+				if( isPrime(tmp2) ){
+					count2++;
+				}
+			}
+			
+			if( (count1 == len1) && ((count2 == len2)) ){
+				System.out.println("Congrats! The number is also a truncatable prime!");
+				return true;
+			}else{
+				System.out.println("The number is prime, but not trancatable prime!");
+				return false;
+			}
+			
+		}else{	
+			System.out.println("Sorry, the number is not a prime at all!");
+			return false;
+		}
+	}
+	
+	
+}

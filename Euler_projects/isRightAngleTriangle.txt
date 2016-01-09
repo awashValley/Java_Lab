@@ -1,0 +1,72 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//display(rightAngleTri(10));
+		rightAngleTri(10);
+		
+		//int[][][] threeDimArr = { { { 1, 2 }, { 3, 4 } }, { { 5, 6 }, { 7, 8 } } };
+		//double[][] array = new double[][] {{0, 1, 2} , {1, 0, 3} , {2, 3, 0}};
+		//System.out.println(array);
+	}
+	
+	//static int[][][] rightAngleTri(int range){
+	static void rightAngleTri(int range){
+	
+		//int[][][] sides = new int[][][];
+		//int z=0;
+		int i2=0;
+		int j2=0;
+		int k2=0;
+		
+		for(int i=1 ; i <= range; i++){
+			i2 = (int)Math.pow(i, 2);
+			
+			for(int j=1 ; j <= range; j++){
+				j2 = (int)Math.pow(j, 2);
+				
+				for(int k=1 ; k <= range; k++){
+					k2 = (int)Math.pow(k, 2);
+					
+					int ijk = (int)Math.pow(j,2) + (int)Math.pow(k,2);
+					int jik = (int)Math.pow(i,2) + (int)Math.pow(k,2);
+					int kij = (int)Math.pow(i,2) + (int)Math.pow(j,2);
+					
+					//System.out.print(i2 + " " + ijk);
+					
+					if( (ijk == i2) || (jik == j2) || (kij == k2) ){
+						
+						//sides[z][z+1][z+2] = {{i, j, k}};
+						//z++;
+						System.out.print(i + " " + j + " " + k);
+					}
+					System.out.println();
+				}
+			}
+		}
+		
+		//return sides;
+	}
+	
+	
+	/*
+	static void display(int[][][] arr){
+	
+		for( int i=0; i < arr.size(); i++){
+			for( int j=0; j < arr.size(); j++){
+				for( int k=0; k < arr.size(); k++){
+					System.out.print(arr[i][j][k] + " ");	
+				}
+			}
+		}	
+		
+	}
+	*/
+}

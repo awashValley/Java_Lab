@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+class CollatzSequence{
+
+    	//static ArrayList<Integer> showCollatzSequence(int startNum){
+    	static int largestChainCollatzSequence(int max){
+        
+        
+        	ArrayList<Integer> out = new ArrayList<Integer>();
+        	//out.add(startNum);
+        	int numTerms;
+        
+        	while( startNum != 1 ){
+            
+            		out.add(startNum);
+            
+            		if( startNum%2 == 0 ){
+                		startNum = startNum/2;
+            		}else{
+                		startNum = (3*startNum) + 1;
+            		}
+        	}
+        
+        	return out;
+    	}
+    
+	/*
+    	static void displayCollatz(ArrayList<Integer> nums){
+        
+        	for( int i=0; i < nums.size(); i++){
+            		System.out.print(nums.get(i) + " ");
+        	}
+    	}
+	*/
+     	public static void main(String []args){
+        
+        	//displayCollatz(showCollatzSequence(50));
+
+		largestChainCollatzSequence(100);     
+    	}
+}
