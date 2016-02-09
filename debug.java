@@ -3,7 +3,8 @@
               public class Calculator
         /*Debug [Stackoverflow-Oliver Charlesworth]: 
               As the error message implies, if you declare a class as public, it needs its own .java file. 
-              If you don't want to do that, then don't define it as public. Otherwise, save the java file using the same name as the class name.
+              If you don't want to do that, then don't define it as public. 
+              Otherwise, save the java file using the same name as the class name (e.g., Calculator.java).
        */
 
 
