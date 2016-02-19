@@ -1,0 +1,4 @@
+## Build calculator using NetBeans
+   1. File -> New Project -> Java -> Java Application 
+   2. Right click on new created project name -> New -> JFrame Form
+      (Class Name: MainFrame; Package: calculator)
