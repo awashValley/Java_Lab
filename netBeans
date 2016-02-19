@@ -2,3 +2,6 @@
    1. File -> New Project -> Java -> Java Application 
    2. Right click on new created project name -> New -> JFrame Form
       (Class Name: MainFrame; Package: calculator)
+   3. To edit JFrame (e.g., disable maximize button), right click on the JFrame -> Properties
+   4. Add panel to the JFrame, go to Palette window -> drag Panel and drop it on JFrame
+      (to change the color of Panel, right click on the Panel -> Properties
