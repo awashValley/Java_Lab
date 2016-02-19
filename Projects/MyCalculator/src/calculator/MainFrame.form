@@ -55,14 +55,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btnClr3" max="32767" attributes="0"/>
+                          <Component id="btnMultiply" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnClr4" min="-2" pref="134" max="-2" attributes="0"/>
+                          <Component id="btnDevide" min="-2" pref="134" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btnClr2" max="32767" attributes="0"/>
+                          <Component id="btnAdd" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnClr1" min="-2" pref="134" max="-2" attributes="0"/>
+                          <Component id="btnSubtract" min="-2" pref="134" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="btn1" max="32767" attributes="0"/>
@@ -124,13 +124,13 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnClr2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnClr1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubtract" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnClr4" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnClr3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDevide" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMultiply" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="13" max="32767" attributes="0"/>
               </Group>
@@ -208,22 +208,22 @@
             <Property name="text" type="java.lang.String" value="C"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnClr1">
+        <Component class="javax.swing.JButton" name="btnSubtract">
           <Properties>
             <Property name="text" type="java.lang.String" value="-"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnClr2">
+        <Component class="javax.swing.JButton" name="btnAdd">
           <Properties>
             <Property name="text" type="java.lang.String" value="+"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnClr3">
+        <Component class="javax.swing.JButton" name="btnMultiply">
           <Properties>
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnClr4">
+        <Component class="javax.swing.JButton" name="btnDevide">
           <Properties>
             <Property name="text" type="java.lang.String" value="/"/>
           </Properties>

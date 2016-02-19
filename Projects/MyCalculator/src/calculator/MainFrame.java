@@ -52,10 +52,10 @@ public class MainFrame extends javax.swing.JFrame {
         btn9 = new javax.swing.JButton();
         btn0 = new javax.swing.JButton();
         btnClr = new javax.swing.JButton();
-        btnClr1 = new javax.swing.JButton();
-        btnClr2 = new javax.swing.JButton();
-        btnClr3 = new javax.swing.JButton();
-        btnClr4 = new javax.swing.JButton();
+        btnSubtract = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnMultiply = new javax.swing.JButton();
+        btnDevide = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -88,13 +88,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnClr.setText("C");
 
-        btnClr1.setText("-");
+        btnSubtract.setText("-");
 
-        btnClr2.setText("+");
+        btnAdd.setText("+");
 
-        btnClr3.setText("*");
+        btnMultiply.setText("*");
 
-        btnClr4.setText("/");
+        btnDevide.setText("/");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,13 +103,13 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnClr3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMultiply, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClr4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnDevide, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnClr2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClr1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSubtract, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(btn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -160,12 +160,12 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(btnClr))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnClr2)
-                    .addComponent(btnClr1))
+                    .addComponent(btnAdd)
+                    .addComponent(btnSubtract))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnClr4)
-                    .addComponent(btnClr3))
+                    .addComponent(btnDevide)
+                    .addComponent(btnMultiply))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -235,11 +235,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btn7;
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnClr;
-    private javax.swing.JButton btnClr1;
-    private javax.swing.JButton btnClr2;
-    private javax.swing.JButton btnClr3;
-    private javax.swing.JButton btnClr4;
+    private javax.swing.JButton btnDevide;
+    private javax.swing.JButton btnMultiply;
+    private javax.swing.JButton btnSubtract;
     private javax.swing.JTextArea display;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
