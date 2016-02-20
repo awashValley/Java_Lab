@@ -22,6 +22,10 @@ package calculator;
  */
 public class MainFrame extends javax.swing.JFrame {
 
+    int first_num, second_num, result;
+    float result_div;
+    String operation;
+    
     /**
      * Creates new form MainFrame
      */
@@ -56,6 +60,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnMultiply = new javax.swing.JButton();
         btnDevide = new javax.swing.JButton();
+        btnResult = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -67,34 +72,116 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(display);
 
         btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
 
         btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
 
         btn3.setText("3");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
         btn4.setText("4");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
 
         btn5.setText("5");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
 
         btn6.setText("6");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6ActionPerformed(evt);
+            }
+        });
 
         btn7.setText("7");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
 
         btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
 
         btn9.setText("9");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
 
         btn0.setText("0");
+        btn0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn0ActionPerformed(evt);
+            }
+        });
 
         btnClr.setText("C");
+        btnClr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClrActionPerformed(evt);
+            }
+        });
 
         btnSubtract.setText("-");
+        btnSubtract.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubtractActionPerformed(evt);
+            }
+        });
 
         btnAdd.setText("+");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         btnMultiply.setText("*");
+        btnMultiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplyActionPerformed(evt);
+            }
+        });
 
         btnDevide.setText("/");
+        btnDevide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDevideActionPerformed(evt);
+            }
+        });
+
+        btnResult.setText("=");
+        btnResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResultActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,6 +223,10 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnResult, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +257,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDevide)
                     .addComponent(btnMultiply))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnResult)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,6 +282,151 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "1");
+      } else{
+        display.setText("1");
+      }
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "2");
+      } else{
+        display.setText("2");
+      }
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "3");
+      } else{
+        display.setText("3");
+      }
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "4");
+      } else{
+        display.setText("4");
+      }
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "5");
+      } else{
+        display.setText("5");
+      }
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "6");
+      } else{
+        display.setText("6");
+      }
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "7");
+      } else{
+        display.setText("7");
+      }
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "8");
+      } else{
+        display.setText("8");
+      }
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "9");
+      } else{
+        display.setText("9");
+      }
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
+      if(display.getText() != null){
+        display.setText(display.getText().toString() + "0");
+      } else{
+        display.setText("0");
+      }
+    }//GEN-LAST:event_btn0ActionPerformed
+
+    private void btnClrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClrActionPerformed
+      display.setText("");
+    }//GEN-LAST:event_btnClrActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+      
+      operation = "+";
+      
+      first_num = Integer.parseInt(display.getText());
+      
+      // prototype: it would be awesome to keep plus sign in the display 
+      display.setText("");
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
+      second_num = Integer.parseInt(display.getText());
+      
+      if(operation.equals("+")){
+        result = first_num + second_num;
+        
+        display.setText(Integer.toString(result));
+      } else if(operation.equals("-")){
+        result = first_num - second_num;
+        
+        display.setText(Integer.toString(result));
+      } else if(operation.equals("*")){
+        result = first_num * second_num;
+        
+        display.setText(Integer.toString(result));
+      } else {
+        result_div = (float)first_num / second_num;  // "float" must be between parenthesis. 
+        
+        display.setText(Float.toString(result_div));
+//        display.setText(String.format("%.2f", result_div));
+      }
+    }//GEN-LAST:event_btnResultActionPerformed
+
+    private void btnSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubtractActionPerformed
+      operation = "-";
+      
+      first_num = Integer.parseInt(display.getText());
+      
+      // prototype: it would be awesome to keep plus sign in the display 
+      display.setText("");
+    }//GEN-LAST:event_btnSubtractActionPerformed
+
+    private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
+      operation = "*";
+      
+      first_num = Integer.parseInt(display.getText());
+      
+      // prototype: it would be awesome to keep plus sign in the display 
+      display.setText("");
+    }//GEN-LAST:event_btnMultiplyActionPerformed
+
+    private void btnDevideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevideActionPerformed
+      operation = "/";
+      
+      first_num = Integer.parseInt(display.getText());
+      
+      // prototype: it would be awesome to keep plus sign in the display 
+      display.setText("");
+    }//GEN-LAST:event_btnDevideActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -239,6 +477,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnClr;
     private javax.swing.JButton btnDevide;
     private javax.swing.JButton btnMultiply;
+    private javax.swing.JButton btnResult;
     private javax.swing.JButton btnSubtract;
     private javax.swing.JTextArea display;
     private javax.swing.JPanel jPanel1;
