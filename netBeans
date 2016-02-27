@@ -9,3 +9,6 @@
       
 ## How to insert main method in Netbeans (shortcut)
    psvm is an acronym for: public static void main [by Lukasz Czerwinski, http://stackoverflow.com/questions/18636463/how-to-insert-main-method-in-netbeans-shortcut]
+
+## System.out.println("");
+   sout
