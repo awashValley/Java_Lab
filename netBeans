@@ -5,3 +5,7 @@
    3. To edit JFrame (e.g., disable maximize button), right click on the JFrame -> Properties
    4. Add panel to the JFrame, go to Palette window -> drag Panel and drop it on JFrame
       (to change the color of Panel, right click on the Panel -> Properties
+      
+      
+## How to insert main method in Netbeans (shortcut)
+   psvm is an acronym for: public static void main [by Lukasz Czerwinski, http://stackoverflow.com/questions/18636463/how-to-insert-main-method-in-netbeans-shortcut]
