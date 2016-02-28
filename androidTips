@@ -5,7 +5,25 @@
       app id would be "com.wdase.mariam.AOUFIEYTAJWVLEQM"
    3. Go to http://downloader-apk.com (this step doesn't work for firefox, but using chrome)
    4. Insert the app id in the space and click "Generate Download Link". This generates a link for download
-   5. To decompile apk file, there are two options
-      - option 1: using the terminal
-      - option 2: using online converter (http://www.decompileandroid.com/)
+   5. To decompile apk file, dex2jar app is needed.
+      - Install the App
+        > Press Command+Space and type Terminal and press enter/return key.
+        > Run in Terminal app:
+          ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+          and press enter/return key. Wait for the command to finish.
+          Run: brew install dex2jar
+          
+   6. Now run Dex2jar, drag and drop file "MyApp.apk" to the dex2jar directory(terminal) 
+      - run: /Dex2-jar/dex2jar-0.0.9.15$ sh d2j-dex2jar.sh MyApp.apk
+      - if you found an error "Cannot use dex2jar on my mac: permission denied"
+        > You need to provide execute permissions to your sh script.
+          - To do that : sudo chmod +x d2j_invoke.sh
+   7. Output: MyApp-1-dex2jar.jar
+   8. Next step:
+      a. open MyApp-1-dex2jar.jar with JD-GUI  to see code.
+      b. Click on icon  JD-GUI
+      c. Now select and open the MyApp-1-dex2jar.jar file, you can  see the code. You can drag and drop jar file to JD-GUI.
+      d. File -> Save all Sources (this will create a zip file with all the source code)
+      e. PS. You can open the source code file with sublime or any other code editor, to analyze the code.
+
    
