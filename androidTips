@@ -1,0 +1,11 @@
+
+## How to download apk files
+   1. Go to google play store and find your app
+   2. Get apps ID. In this link, for example, https://play.google.com/store/apps/details?id=com.wdase.mariam.AOUFIEYTAJWVLEQM&hl=en
+      app id would be "com.wdase.mariam.AOUFIEYTAJWVLEQM"
+   3. Go to http://downloader-apk.com (this step doesn't work for firefox, but using chrome)
+   4. Insert the app id in the space and click "Generate Download Link". This generates a link for download
+   5. To decompile apk file, there are two options
+      - option 1: using the terminal
+      - option 2: using online converter (http://www.decompileandroid.com/)
+   
