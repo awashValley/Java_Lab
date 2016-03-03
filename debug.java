@@ -6,5 +6,8 @@
               If you don't want to do that, then don't define it as public. 
               Otherwise, save the java file using the same name as the class name (e.g., Calculator.java).
        */
+       
+// [03MAR2016] Error: Illegal start of type
+   /* You cannot use for/while loop inside a class body, you need to put them in some kind of method. [Stackoverflow, by Beri] */
 
 
