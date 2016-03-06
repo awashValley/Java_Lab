@@ -8,7 +8,3 @@
 /*   */   }
 /*   */ }
 
-/* Location:           /Users/workuhm/Documents/Tic-Tac-Toe/
- * Qualified Name:     TicTacToeTest
- * JD-Core Version:    0.6.2
- */
