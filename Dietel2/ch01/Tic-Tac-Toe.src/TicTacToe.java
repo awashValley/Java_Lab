@@ -138,7 +138,3 @@
 /*     */   }
 /*     */ }
 
-/* Location:           /Users/workuhm/Documents/Tic-Tac-Toe/
- * Qualified Name:     TicTacToe
- * JD-Core Version:    0.6.2
- */
