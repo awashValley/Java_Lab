@@ -18,7 +18,7 @@ package calculator;
 
 /**
  *
- * @author workuhm
+ * 
  */
 public class MainFrame extends javax.swing.JFrame {
 
